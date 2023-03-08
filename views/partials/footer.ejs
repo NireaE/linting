@@ -4,7 +4,16 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>This simple bootstrap template comes from the following: <a href="https://www.w3schools.com/bootstrap/bootstrap_templates.asp">https://www.w3schools.com/bootstrap/bootstrap_templates.asp</a></p>
+  <p>This simple bootstrap template comes from the following: <a href="https://www.w3schools.com/bootstrap/bootstrap_templates.asp">https://www.w3schools.com/bootstrap/bootstrap_templates.asp</a>
+  </p>
+  <p><small>&copy; 2021-<span id="this-year"></span> by 
+            Elias Nirea, All Rights Reserved ~ 
+  </p>
+
+  <script>
+     let d = new Date(); let thisYear = d.getFullYear();
+     document.getElementById("this-year").innerHTML = thisYear;
+  </script>
 </footer>
 
 </body>

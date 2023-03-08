@@ -9,6 +9,7 @@ app.use(express.static(__dirname));
 
 //here's a json file of user data
 var data = require('./data/test.json');
+
 app.get('/', (req, res) => {
   var title = "Home Page";
   res.render('pages/index', { 'title': title });
@@ -36,6 +37,11 @@ app.get('/users/view/:id', function(req, res) {
     title: title,
     user: data[--id]
   });
+});
+
+app.get('/hobbies', (req, res) => {
+  var title = "Hobbies Page";
+  res.render('pages/hobbies', { 'title': title });
 });
 
 app.listen(port, () => {
